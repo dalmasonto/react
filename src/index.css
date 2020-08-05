@@ -11,3 +11,23 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.menu-center{
+  background: red;
+}
+
+.nav-icon{
+  font-size: 30px;
+}
+
+.new-split-pane{
+  border-radius: 100px;
+  color: red;
+  margin: 10px;
+  position: absolute;
+  top: 60px;
+  left: 60px;
+}
+.new-pane{
+  /* background: red; */
+}
