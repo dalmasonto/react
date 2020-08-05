@@ -57,7 +57,7 @@ ReactDOM.render(
           <IonContent className="menu-center" color="">
             <IonList color="dark">
 
-              <IonItem routerLink="/home" color="">
+              <IonItem routerLink="/home" color="dark">
                 <IoIosHome className="nav-icon" slot="start" />
                 <IonLabel>
                   Home
