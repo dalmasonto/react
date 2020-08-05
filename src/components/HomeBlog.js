@@ -18,7 +18,6 @@ function HomeBlog({ children, update }) {
               <IonAvatar className="homeBlogImg" slot="start">
                 <img src={update.urlToImage} />
               </IonAvatar>
-              {/* <IonImg className="ion-no-padding fixed-img-size" src={update.img}  /> */}
               <IonLabel>
                 <IonCardTitle> {update.title} </IonCardTitle>
                 <p> Author: {update.author} </p>

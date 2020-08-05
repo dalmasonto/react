@@ -2,7 +2,6 @@ import React, { useRef, useState } from 'react'
 import { Link } from 'react-router-dom';
 import { IoMdPersonAdd, IoIosPersonAdd, IoIosKey, IoIosLogIn } from 'react-icons/io';
 import { IonButton, IonInput, IonLabel, IonItem, IonCard, IonRippleEffect, IonSegment, IonSegmentButton } from '@ionic/react';
-import { get } from 'jquery';
 
 
 function Login() {
@@ -51,7 +50,6 @@ function Login() {
               {/* <label htmlFor="pass">Password</label>
               <input id="pass" type="Password" className="form-control" placeholder=" Enter Password" required /> */}
               <IonItem>
-                {/* <IoIosKey/> */}
                 <IonLabel position="floating"> Password </IonLabel>
                 <IonInput type="password" ref={login_password} onIonInput={ checkSetState }/>
               </IonItem>
@@ -60,7 +58,6 @@ function Login() {
           </div>
 
           <div className="form-row mt-2">
-            {/* <button type="submit" className="btn btn-primary w-100"> Login </button> */}
 
             <div className="col">
               <IonButton fill="outline" expand="block" disabled={getstate.password === "" && getstate.username === "" ? true : false }>

@@ -42,61 +42,19 @@ export default class Home extends Component {
       handleSegment(this.state.category)
     }
 
-    // let stateUpdate = (e) => {
-    //   let cat = e.target.innerHTML;
-    //   let { news, category, sorted } = this.state;
-    //   let sorted = [...news];
-    //   this.state.news.filter((new_update, index) => new_update.category === cat.trim(cat))
-    //   if (category !== 'all'){
-    //     sorted = sorted.filter((new_update, index) => new_update.category === cat.trim(cat))
-    //   }
-    //   this.setState({
-    //     sorted: sorted
-    //   });
-    // }
-
     let newsBlogs = sortedNews.map(
       (map_update, index) => {
         return <HomeBlog key={index} update={map_update} />
       }
     )
 
-    // let segments = new_categories.map((cat, index) => {
-    //   let url = `?${cat}`;
-    //   return (
-    //     <>
-    //       <IonSegmentButton value={cat} key={index} href={url} routerLink={url}> 
-    //         {cat}
-    //       </IonSegmentButton>
-    //     </>)
-    // })
-
     return (
       <>
         <Nav page="Home" />
 
-        {/* <IonHeader>
-          <IonToolbar>
-            <div className="row" >
-              <div className="col-md-2 col-sm-3 col-xs-3">
-                <IonButtons slot="start">
-                  <IonMenuButton></IonMenuButton>
-                </IonButtons>
-              </div>
-              <div className="col-md-6 col-sm-9 col-xs-9">
-                <IonSearchbar mode="ios"></IonSearchbar>
-              </div>
-            </div>
-          </IonToolbar>
-        </IonHeader> */}
-
         <IonContent className="ion-margin-bottom mb-3 jumbotron">
           <div className="row">
             <IoIosColorFilter />
-
-            {/* <IonSegment value={this.state.category}>
-              {segments}
-            </IonSegment> */}
 
             {newsBlogs}
 

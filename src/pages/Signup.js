@@ -51,8 +51,6 @@ function Signup() {
 
             <hr />
             <p>By creating an account you agree to our <a href="JavaScriptVoid(0)">Terms  privacy</a>.</p>
-            {/* <button type="submit" className="btn btn-primary w-100"> <IoMdPersonAdd /> Signup </button>
-           */}
             <div className="form-row">
               <div className="col">
                 <IonButton expand="block" fill="outline">

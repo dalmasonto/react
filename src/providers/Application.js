@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-// import data from './Data'
 
 
 const Applicationcontext = React.createContext();
@@ -34,12 +33,6 @@ class Applicationprovider extends Component {
 
     let newsUpdates = data;
     console.log("okay", newsUpdates);
-
-    // this.setState({
-    //   news: newsUpdates,
-    //   sortedNews: newsUpdates,
-    //   loading: false
-    // })
 
   }
 

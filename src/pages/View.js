@@ -10,7 +10,6 @@ export default class componentName extends Component {
 
   constructor(props) {
     super(props);
-    // console.log(this.props.match.params.view);
     this.state = {
       title: decodeURIComponent(this.props.match.params.view),
     }
@@ -27,22 +26,11 @@ export default class componentName extends Component {
         {
           newsUpdate === undefined ? (
             <>
-              {/* <Navbar page="Blog" /> */}
               <Error />
             </>
           ) : (
               <>
-                <Navbar page={newsUpdate.title} />
-
-                {/*                   
-                  <IonContent className="ion-margin-bottom mb-3 ">
-                    <div className="row"> */}
-
-                {/* <IonCard className="ion-no-padding ion-no-margin">
-                        <IonCardHeader>
-                          <h4 className="text-center text-dark">{newsUpdate.title} </h4>
-                        </IonCardHeader>
-                      </IonCard> */}
+                <Navbar page={newsUpdate.title} />             
 
                 <IonContent>
                   <IonCard className="ion-no-margin">
@@ -72,9 +60,6 @@ export default class componentName extends Component {
                   <Margin />
                 </IonContent>
 
-                {/* </div> */}
-                {/* <Margin /> */}
-                {/* </IonContent> */}
               </>
             )
         }

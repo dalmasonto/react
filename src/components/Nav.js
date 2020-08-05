@@ -10,43 +10,6 @@ function toggleShow(){
   document.querySelector('.inner-ul').classList.toggle('show');
 }
 
-// function Nav() {
-//   return (
-//     <IonToolbar color="dark" className="fixed-top overflow">
-//     <div className="navbar">
-
-//       <div className="banner-b">
-//         <Link className="a" to='/'> <h4> BLOGGER </h4> </Link>
-//       </div>
-
-//       <div className="humburger" onClick={toggleShow}>
-//         <span className="bars bar-1"></span>
-//         <span className="bars bar-2"></span>
-//         <span className="bars bar-3"></span>
-//       </div>
-
-      // <ul className="inner-ul">
-
-      //   <li className="links"> <Link className="a-d" to='/' onClick={toggleShow}> <FaHome className="nav-icons" /> Home </Link> </li>
-
-      //   <li className="links"> <Link className="a" to='/favorites/' onClick={toggleShow}> <FaHeart className="nav-icons"/> Favourites </Link> </li>
-
-      //   <li className="links"> <Link className="a" to='/login/' onClick={toggleShow}> <IoIosLogIn className="nav-icons"/> Login </Link> </li>
-
-      //   <li className="links"> <Link className="a" to='/signup/' onClick={toggleShow}> <IoIosPersonAdd className="nav-icons"/>  Signup </Link> </li>
-        
-      //   <li className="links"> <Link className="a" to='/profile/' onClick={toggleShow}> <IoIosPerson className="nav-icons"/> Profile </Link> </li>
-
-      //   <li className="links"> <Link className="a" to='/categories/' onClick={toggleShow}> Categories </Link> </li> 
-
-      // </ul>
-      
-//     </div>
-//     </IonToolbar>
-//   )
-// }
-
-
 function Nav({page, children}) {
   return (
     <>
