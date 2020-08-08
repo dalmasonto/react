@@ -21,6 +21,8 @@ export default class componentName extends Component {
     const { getUpdate } = this.context;
     const newsUpdate = getUpdate(this.state.title);
     console.log('The update is', newsUpdate)
+
+    // date = date.toString().substr(0, 16)
     return (
       <>
         {
@@ -33,12 +35,12 @@ export default class componentName extends Component {
                 <Navbar page={newsUpdate.title} />             
 
                 <IonContent>
+                  <div className="container">
                   <IonCard className="ion-no-margin">
                     <IonCardHeader>
 
                       <h4 className="text-center text-dark">{newsUpdate.title} </h4>
                     </IonCardHeader>
-                    <hr style={{ background: '#131419' }} />
                     <IonImg src={newsUpdate.urlToImage} />
                     <IonCardContent>
                       <p> Author: {newsUpdate.author} </p>
@@ -55,11 +57,12 @@ export default class componentName extends Component {
                     </IonCardContent>
                   </IonCard>
                   <IonButton expand="block" fill="outline">
-                    <a href={newsUpdate.utl}> Read more at {newsUpdate.source.name} </a>
+                    <a target="_blank" href={newsUpdate.url}> Read more at {newsUpdate.source.name} </a>
                   </IonButton>
+                  </div>
                   <Margin />
                 </IonContent>
-
+                
               </>
             )
         }

@@ -28,3 +28,14 @@ code {
   top: 60px;
   left: 60px;
 }
+
+.fav-page{
+  /* --background: red; */
+  /* --background: url('./magazine/M26.jpg') no-repeat center ; */
+  /* background: url('./magazine/M15.jpg');  */
+  /* background-attachment: fixed;
+  background-position: unset;
+  background-repeat: no-repeat;
+  background-size: auto;
+  color: red; */
+}

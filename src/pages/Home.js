@@ -10,7 +10,7 @@ import Nav from '../components/Nav';
 import Margin from '../components/Margin';
 
 import { Applicationcontext } from '../providers/Application';
-import { IoIosColorFilter } from 'react-icons/io';
+import { IoIosColorFilter, IoMdColorFilter } from 'react-icons/io';
 
 export default class Home extends Component {
 
@@ -53,18 +53,23 @@ export default class Home extends Component {
         <Nav page="Home" />
 
         <IonContent className="ion-margin-bottom mb-3 jumbotron">
-          <div className="row">
+          <div className="container">
+            <div className="row">
+              
+            </div>
+          </div>
             <IoIosColorFilter />
 
-            {newsBlogs}
-
-            {
+            <div className="container-fluid">
+              <div className="row">
+                {newsBlogs}
+              </div>
+            </div>
+            {/* {
               this.state.sorted.map((update, index) => {
                 return <HomeBlog key={index} update={update} />
               })
-            }
-
-          </div>
+            } */}
           <Margin />
         </IonContent>
       </>

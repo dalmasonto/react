@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import data from './Data';
+import { signup, login, checkLoginStatus, logout } from './UserData';
 
 
 const Applicationcontext = React.createContext();
@@ -8,7 +10,8 @@ class Applicationprovider extends Component {
   state = {
     news: [],
     sortedNews: [],
-    loading: true
+    loading: true,
+    loggedIn: checkLoginStatus(),
   }
 
   async componentDidMount() {
@@ -31,8 +34,15 @@ class Applicationprovider extends Component {
 
     });
 
-    let newsUpdates = data;
-    console.log("okay", newsUpdates);
+    // offline version
+    // const userState = checkLoginStatus();
+
+    // await this.setState({
+    //   news: data,
+    //   sortedNews: data,
+    //   loading: false,
+    //   loggedIn: userState
+    // })
 
   }
 
@@ -57,12 +67,56 @@ class Applicationprovider extends Component {
     })
   }
 
+  signUpUser = (details) => {
+    signup(details);
+  }
+
+  loginUser = (username_, password) => {
+    const dataToLogin = login(username_, password);
+    // this.setState({
+    //   news: data,
+    //   sortedNews: data,
+    //   loading: false,
+    //   loggedIn: JSON.stringify({
+    //     username: username_,
+    //     loggedInStatus: true
+    //   })
+    // })
+    return dataToLogin;
+  }
+
+  checkUserStatus = () => {
+    const userState = this.state.loggedIn;
+    // this.setState({
+    //   news: data,
+    //   sortedNews: data,
+    //   loading: false,
+    //   loggedIn: userState
+    // })
+    return userState;
+  }
+
+  logoutUser = () => {
+    logout();
+    this.setState({
+      news: data,
+      sortedNews: data,
+      loading: false,
+      loggedIn: this.checkUserStatus()
+    })
+
+  }
+
   render() {
     return (
       <Applicationcontext.Provider value={{
         ...this.state,
         getUpdate: this.getUpdate,
-        handleSegment: this.handleSegment
+        handleSegment: this.handleSegment,
+        userSignup: this.signUpUser,
+        userLogin: this.loginUser,
+        userLogout: this.logoutUser,
+        checkStatus: this.checkUserStatus
       }}>
         {this.props.children}
       </Applicationcontext.Provider>
@@ -77,3 +131,4 @@ export {
   Applicationcontext,
   Applicationconsumer
 }
+ 
