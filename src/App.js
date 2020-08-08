@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 
-import Navbar from './components/Nav'
-
 import { IonApp, IonContent, IonSplitPane, IonHeader, IonToolbar, IonMenu, IonTitle, IonPage, IonList, IonItem, IonLabel, IonButton, IonGrid, IonRow, IonCol } from '@ionic/react'
 import { IoIosHome, IoIosLogIn, IoIosPersonAdd, IoIosNotifications, IoIosHeart, IoIosPerson, IoIosLogOut, IoIosReorder } from 'react-icons/io';
 
@@ -16,15 +14,12 @@ import Fav from './pages/Fav';
 import Error from './pages/Error';
 import Notifications from './pages/Notifications';
 import Profile from './pages/Profile';
-import Signup from './pages/Signup';
 import Sorted from './pages/Sorted';
 import View from './pages/View';
 
 
-import Nav from './components/Nav';
 
 import { Applicationcontext } from './providers/Application';
-import { checkLoginStatus } from './providers/UserData';
 
 export default class App extends Component {
 

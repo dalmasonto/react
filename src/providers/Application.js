@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import data from './Data';
+// import data from './Data';
 import { signup, login, checkLoginStatus, logout } from './UserData';
 
 
@@ -99,9 +99,9 @@ class Applicationprovider extends Component {
   logoutUser = () => {
     logout();
     this.setState({
-      news: data,
-      sortedNews: data,
-      loading: false,
+      // news: data,
+      // sortedNews: data,
+      // loading: false,
       loggedIn: this.checkUserStatus()
     })
 

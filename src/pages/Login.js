@@ -6,7 +6,7 @@ import Nav from '../components/Nav';
 import LoginComponent from '../components/Login';
 import SignupComponent from '../components/Signup';
 
-import Apllicationcontext, { Applicationcontext } from '../providers/Application';
+import { Applicationcontext } from '../providers/Application';
 
 export default class Login extends Component {
   

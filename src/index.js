@@ -20,8 +20,6 @@ import '@ionic/react/css/text-transformation.css';
 import '@ionic/react/css/flex-utils.css';
 import '@ionic/react/css/display.css';
 
-import Navbar from './components/Nav'
-
 import { IonApp, IonContent, IonSplitPane, IonHeader, IonToolbar, IonMenu, IonTitle, IonPage, IonList, IonItem, IonLabel } from '@ionic/react'
 import { IoIosHome, IoIosLogIn, IoIosPersonAdd, IoIosNotifications, IoIosHeart, IoIosPerson } from 'react-icons/io';
 
