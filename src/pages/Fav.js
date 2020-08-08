@@ -4,7 +4,7 @@ import { IonContent, IonCard, IonCardHeader, IonCardContent, IonList, IonListHea
 
 import Margin from '../components/Margin';
 
-import favImage from '../magazine/M5.jpg';
+// import favImage from '../magazine/M5.jpg';
 import { IoIosAlarm, IoMdPerson } from 'react-icons/io';
 
 class Fav extends Component {
