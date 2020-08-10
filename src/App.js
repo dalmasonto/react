@@ -86,9 +86,7 @@ export default class App extends Component {
                 </IonItem>
 
 
-                {
-                  this.state.loggedIn.loggedInStatus === true ?
-                    <>
+        
                       <IonItem routerLink="/profile/" color="">
                         <IoIosPerson slot="start" className="nav-icon" />
                         <IonLabel>
@@ -128,8 +126,7 @@ export default class App extends Component {
                       </IonItem>
 
 
-                    </> :
-                    <>
+                   
                       <IonItem routerLink="/login" color="">
                         <IoIosLogIn className="nav-icon" slot="start" />
                         <IonLabel>
@@ -137,9 +134,7 @@ export default class App extends Component {
                         </IonLabel>
                       </IonItem>
 
-                    </>
-
-                }
+                  
 
 
                 <IonItem routerLink="/categories" color="">
