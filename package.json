@@ -1,7 +1,8 @@
 {
   "name": "discuzz",
   "version": "0.1.0",
-  "description": "The best new app",
+  "description": "The best news application bt @dalmasonto",
+  "homepage":"/build", 
   "private": true,
   "engines": {
     "node": "12.16.1"
