@@ -23,35 +23,35 @@ export default class Nav extends Component {
 
   static contextType = Applicationcontext;
 
-  state = {
-    loggedIn: false,
-  }
+  // state = {
+  //   loggedIn: false,
+  // }
 
-  async componentDidMount(){
-    const { loggedIn } = this.context;
-    // console.log('waiting state', loggedIn);
-    await this.setState({
-      loggedIn: JSON.parse(loggedIn),
-    })
-  }
+  // async componentDidMount(){
+  //   const { loggedIn } = this.context;
+  //   // console.log('waiting state', loggedIn);
+  //   await this.setState({
+  //     loggedIn: JSON.parse(loggedIn),
+  //   })
+  // }
 
   render() {
 
-    const { checkStatus, userLogout } = this.context;
-    const answer = JSON.parse(checkStatus())
-    console.log('sattst', answer)
+    // const { checkStatus, userLogout } = this.context;
+    // const answer = JSON.parse(checkStatus())
+    // console.log('sattst', answer)
 
-    console.log('Nav state ', this.state)
+    // console.log('Nav state ', this.state)
 
-    const username = answer.username;
-    const loggedInStatus = answer.loggedInStatus;
+    // const username = answer.username;
+    // const loggedInStatus = answer.loggedInStatus;
 
-    const Logout = () => {
-      userLogout();
-      this.setState({
-        loggedIn: false,
-      })
-    } 
+    // const Logout = () => {
+    //   userLogout();
+    //   this.setState({
+    //     loggedIn: false,
+    //   })
+    // } 
 
     return (
       <>
@@ -75,18 +75,16 @@ export default class Nav extends Component {
                 <li className="links"> <Link className="a" to='/' onClick={toggleShow}> <FaHome className="nav-icons" /> Home </Link> </li>
 
 
-                {
-                  this.state.loggedIn.loggedInStatus === true ? <>
+               
                     <li className="links"> <Link className="a" to='/profile/' onClick={toggleShow}> <IoIosPerson className="nav-icons" /> Profile </Link> </li>
 
                     <li className="links"> <Link className="a" to='/favourites/' onClick={toggleShow}> <FaHeart className="nav-icons" /> Favourites </Link> </li>
 
                     <li className="links" onClick={Logout}>  <IoIosLogOut /> Logout </li>
 
-                  </> : <>
                       <li className="links"> <Link className="a" to='/login/' onClick={toggleShow}> <IoIosLogIn className="nav-icons" /> Login | Sign Up </Link> </li>
-                  </> 
-                }
+              
+                
                 <li className="links"> <Link className="a" to='/categories/' onClick={toggleShow}> Categories </Link> </li>
               </ul>
 
