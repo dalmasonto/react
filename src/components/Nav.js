@@ -80,7 +80,7 @@ export default class Nav extends Component {
 
                     <li className="links"> <Link className="a" to='/favourites/' onClick={toggleShow}> <FaHeart className="nav-icons" /> Favourites </Link> </li>
 
-                    <li className="links" onClick={Logout}>  <IoIosLogOut /> Logout </li>
+                    <li className="links">  <IoIosLogOut /> Logout </li>
 
                       <li className="links"> <Link className="a" to='/login/' onClick={toggleShow}> <IoIosLogIn className="nav-icons" /> Login | Sign Up </Link> </li>
               
