@@ -1,8 +1,8 @@
 {
   "name": "discuzz",
   "version": "0.1.0",
-  "description": "The best news application bt @dalmasonto",
-  "homepage":"/build", 
+  "description": "The best news application by @dalmasonto",
+  "homepage":"http://reactdiscuzz.herokuapp.com/", 
   "private": true,
   "engines": {
     "node": "12.16.1"
