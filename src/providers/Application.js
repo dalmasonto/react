@@ -17,7 +17,7 @@ class Applicationprovider extends Component {
   async componentDidMount() {
     let data;
     const url =
-      "http://newsapi.org/v2/top-headlines?" +
+      "/v2/top-headlines?" +
       "country=us&" +
       "apiKey=be64b79bc5a54295bde012c21cc488e3";
     const req = new Request(url);
