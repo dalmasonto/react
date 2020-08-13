@@ -30,7 +30,7 @@
     "eject": "react-scripts eject",
     "heroku-postbuild": "npm run build"
   },
-  "proxy": "http://localhost:4000",
+  "proxy": "http://newsapi.org",
   "eslintConfig": {
     "extends": "react-app"
   },
